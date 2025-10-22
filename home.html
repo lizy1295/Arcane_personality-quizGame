@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcane Personality Quest</title>
+    <style>
+        /*---global styles--*/
+      body{
+        margin:0;
+        padding: 0;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:#e2d7b7;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        min-height:100hv;
+        background-image:url('red.jpg');
+
+      }
+    h1,h2{
+        text-align:center;
+        color:rgb(133, 235, 201);
+      }
+    p{
+        line-height:1.6;
+        color:#d8cfae;
+        text-align:center;
+    }
+    /*--navbar--*/
+    header{
+        width:100%;
+        background:rgba(167, 4, 53, 0.85);
+        border-bottom:1px solid rgb(201, 180, 199);
+        position:relative;
+        
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 15px 0;
+    }
+     .navbar a {
+      color: #e2d7b7;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover, .navbar a.active {
+      color: #c6b168;
+    }
+
+    .logo {
+      font-size: 1.3em;
+      color: #c70711;
+      margin-right:50px;
+    }
+    .intro-container{
+        text-align: center;
+        background: #1e1e2e;
+        color: #eee;
+        padding: 40px;
+        border-radius: 12px;
+}
+
+    
+    .container {
+        display: flex;              /* makes items sit side by side */
+        justify-content: center;    /* centers them horizontally */
+        align-items: flex-start;    /* aligns items at the top */
+        gap: 20px;                  /* adds space between images */
+        margin-top: 40px;
+        background-image:url('red.jpg');
+        background-repeat:inherit;
+
+    }
+    .item{
+        text-align:center;
+    }
+    .item img{
+        width:200px;
+        height:200px;
+        object-fit:cover;
+        border-radius:20px
+    }
+    .caption{
+        margin-top:8px;
+        font-size:1.1rem;
+        font-size:1.3rem;
+        font-weight:bold;
+        color:#c9bb94;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #f8d471;
+      font-style: italic;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+
+    /* === INTRO SECTION === */
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #e2d7b7;
+      color: #61ac9b;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #c9bb94;
+      transform: scale(1.05);
+    }
+
+    /* === GRID ITEMS (FOR YOUR .item divs) === */
+    .item {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #c9bb94;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .item:hover{
+        transform: translateY(-8px);
+        box-shadow: #4c5f59;
+    }
+
+    .container .item {
+      display: inline-block;
+      width: 40%;
+      margin: 10px;
+    }
+
+    /* === QUIZ SCREEN === */
+    .progress-bar {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      height: 10px;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .progress {
+      background-color: #c9bb94;
+      height: 10px;
+      border-radius: 10px;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    /* === RESULT SCREEN === */
+    #result-container {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 1.2rem;
+      color: #f4e9b6;
+    }
+
+    /* === FOOTER === */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #a8996c;
+      margin-top: 40px;
+      padding: 10px;
+      border-top: 1px solid #c9bb94;
+    }
+
+    /* === RESPONSIVE DESIGN === */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .container .item {
+        width: 80%;
+      }
+    }
+    </style>
+ 
+</head>
+
+    
+<body>
+    <header>
+    <nav class="navbar">
+            <a href="#" class="logo">Arcane Quest</a>
+            <a href="#" class="active">Home</a>
+            <a href="arcan.html">Take the quiz</a>
+    
+    </nav>
+    </header>
+    <div class="container intro-container">
+        
+            <h1 >Arcane Personality Quest</h1>
+            <p class="subtitle">Discover which Arcane character matches your personality</p>
+        
+
+        <section id="intro-screen" class="game-section">
+            <div class="intro">
+                <h2>Welcome to the Undercity</h2>
+                <p>Step into the world of Piltover and Zaun in this interactive personality quiz. Through a series of scenarios inspired by the hit series Arcane, you'll discover which character's personality aligns with your own.</p>
+                <p>Answer honestly based on your instincts - there are no right or wrong answers. Your choices will reveal whether you're more of a Vi, Jinx, Viktor, Caitlyn, or a unique blend of characters.</p>
+                <p>Ready to begin your journey?</p>
+            </div>
+    <div class="container">
+      <div class="item item-1">
+      <img src="vd.jpg" alt="Jinx">
+      <p class="caption">Jinx</p>
+        </div>
+
+       <div class="item item-2">
+       <img src="fds.jpg" alt="Ekko">
+       <p class="caption">Ekko</p>
+          </div>
+
+      <div class="item item-3">
+      <img src="vdfv.jpg" alt="Vi">
+      <p class="caption">Vi</p>
+          </div>
+      <div class="item item-4">
+      <img src="cdc.jpg" alt="Caitlyn">
+      <p class="caption">Caitlyn</p>
+        </div>
+    </div>
+    
+            <button id="start-btn" class="btn">Start the Quiz</button>
+        </section>
+
+        <section id="quiz-screen" class="game-section">
+            <div class="progress-bar">
+                <div class="progress" id="quiz-progress"></div>
+            </div>
+            
+            <div id="question-container">
+                <!-- Questions will be inserted here by JavaScript -->
+            </div>
+            
+      
+        </section>
+
+        <section id="result-screen" class="game-section">
+            <div id="result-container">
+                <!-- Results will be inserted here by JavaScript -->
+            </div>
+           
+        </section>
+
+        <footer>
+            <p>This fan-made quiz is for entertainment purposes only. Arcane is a trademark of Riot Games.</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
