@@ -1,17 +1,57 @@
-body {
-  font-family: 'Georgia', serif;
-  background: radial-gradient(circle, #1a1a1a, #000);
-  color: #0c0c0b;
-  background-image: url('pop.jpg');
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+.logo{
+  color:#fff;
+  font-size:1.5rem;
+  font-weight:bold;
+  text-decoration:none;
+  height:50px;
+  margin-right:20px;
 
 }
+.nav-links{
+  display:flex;
+  gap:25px;
+  color:beige;
+  text-align: center;
+
+}
+.nav link a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  transition:color o.3 ease;
+
+}
+.nav-links a:hover,
+.nav-links a.active{
+  color:#fff
+}
+.about{
+  color:#fff;
+  justify-content: center;
+  background-position:scroll;
+  padding:60px 48px;
+  text-align:center;
+  margin-top:2px solid #d8d8d8;
+  border-bottom:2px solid #d8d8d8;
+}
+.about h2{
+  color: #ec4f8c;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+}
+.about p{
+   max-width: 800px;
+  margin: 0 auto 20px auto;
+  line-height: 1.7;
+  font-size: 1.5rem;
+
+}
+
 .header {
-  background-color: #251221;
+  background-image: url('pop.jpg');
   top:0;
   left:0;
   width:100%;
@@ -25,13 +65,19 @@ body {
 }
 
 .quiz-container {
-  background: rgba(231, 94, 94, 0.7);
   border: 1px solid #e2d7b7;
   border-radius: 20px;
   padding: 30px;
-  max-width: 600px;
+  max-width: 800px;
+  width:90%;
   text-align: center;
-  box-shadow: 0 0 20px rgba(226, 215, 183, 0.3);
+  box-shadow: 0 0 20px rgba(235, 17, 46, 0.3);
+  justify-content: center;
+ margin:80px auto;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: #fff;
+ background-color: #e46072;
+ font-size:1.6rem;
 }
 
 h1 {
@@ -41,13 +87,15 @@ h1 {
 
 button {
   background-color: #e2d7b7;
-  color: #000;
+  color: #4b0318;
   border: none;
   padding: 10px 20px;
   margin-top: 20px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 1.7rem;
+
  
 }
 

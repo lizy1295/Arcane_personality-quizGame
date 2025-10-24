@@ -6,34 +6,41 @@
     <title>Arcane Personality 
       quizGame</title>
     <style>
-        /*---global styles--*/
+        
       body{
         margin:0;
         padding: 0;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color:#e2d7b7;
+        color:#61ce6a;
         display:flex;
         flex-direction: column;
         align-items:center;
         min-height:100hv;
-        background-image:url('red.jpg');
+        background-color: #669454;
 
       }
     h1,h2{
         text-align:center;
-        color:rgb(133, 235, 201);
+        color:rgb(226, 241, 17);
+        font-size:3rem;
       }
     p{
         line-height:1.6;
-        color:#d8cfae;
+        color:#fff;
         text-align:center;
+        font-size:1.2rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     /*--navbar--*/
     header{
         width:100%;
-        background:rgba(167, 4, 53, 0.85);
+        background:rgba(70, 161, 67, 0.85);
         border-bottom:1px solid rgb(201, 180, 199);
-        position:relative;
+        align-items: center;
+        justify-content: space-between;
+        padding:15px 40px;
+        background-image: url('red.jpg');
+
         
     }
     .navbar {
@@ -44,20 +51,23 @@
       padding: 15px 0;
     }
      .navbar a {
-      color: #e2d7b7;
+      color: #dad8d3;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
+      font-size: 2rem;
     }
 
     .navbar a:hover, .navbar a.active {
-      color: #c6b168;
+      color: #f4faf4;
     }
 
     .logo {
-      font-size: 1.3em;
-      color: #c70711;
+      font-size: 3.5em;
+      color: #f4faf4;
       margin-right:50px;
+      font-weight: bolder;
+      
     }
     .intro-container{
         text-align: center;
@@ -65,43 +75,66 @@
         color: #eee;
         padding: 40px;
         border-radius: 12px;
-}
+        font-size:2rem;
+      }
+    .subtitle{
+      color:#d4e9ce;
+      font-style:italic;
+      margin:-10px;
+      margin-bottom: 20px;
+      font-size: 3vw;
+      
 
+      }
+    .intro{
+      margin-bottom: 30px;
+
+    }
+    .h1{
+      font-size: 3vw;
+    }
     
     .container {
         display: flex;              /* makes items sit side by side */
         justify-content: center;    /* centers them horizontally */
-        align-items: flex-start;    /* aligns items at the top */
+        align-items: flex-start; 
+        flex-wrap:wrap;   /* aligns items at the top */
         gap: 20px;                  /* adds space between images */
         margin-top: 40px;
         background-image:url('red.jpg');
         background-repeat:inherit;
+        display:inline;
 
     }
     .item{
         text-align:center;
+        border: 1px solid #cff34d;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+    
     .item img{
         width:200px;
         height:200px;
         object-fit:cover;
-        border-radius:20px
+        border-radius:20px;
+        
+    }
+    .item:hover{
+      transform: translateY(-8px);
+      box-shadow: 0 4px 12px rgba(102, 165, 86, 0.4);
     }
     .caption{
         margin-top:8px;
         font-size:1.1rem;
         font-size:1.3rem;
         font-weight:bold;
-        color:#c9bb94;
+        color:#fff;
     }
 
-    .subtitle {
-      text-align: center;
-      color: #f8d471;
-      font-style: italic;
-      margin-top: -10px;
-      margin-bottom: 20px;
-    }
+  
 
     /* === INTRO SECTION === */
     .intro {
@@ -112,7 +145,7 @@
     .btn {
       display: inline-block;
       background-color: #e2d7b7;
-      color: #61ac9b;
+      color: #123a02;
       border: none;
       padding: 12px 25px;
       font-size: 1rem;
@@ -128,23 +161,20 @@
     }
 
     /* === GRID ITEMS (FOR YOUR .item divs) === */
-    .item {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid #c9bb94;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .item:hover{
-        transform: translateY(-8px);
-        box-shadow: #4c5f59;
-    }
+    
 
     .container .item {
-      display: inline-block;
+      display:flex;
       width: 40%;
       margin: 10px;
     }
+    .scroll-container::-webkit-scrollbar{
+      height:8px;
+    }
+    .scroll-container::-webkit-scrollbar-thumb{
+      border-radius: 5px;
+    }
+    
 
     /* === QUIZ SCREEN === */
     .progress-bar {
@@ -179,6 +209,11 @@
       margin-top: 40px;
       padding: 10px;
       border-top: 1px solid #c9bb94;
+      background-color:#669454;
+    }
+    .about{
+      background-color: #669454;
+      font-family: 'Times New Roman', Times, serif;
     }
 
     /* === RESPONSIVE DESIGN === */
@@ -189,7 +224,10 @@
       }
 
       .container .item {
-        width: 80%;
+        width: 200px;
+        flex:0 0 auto;
+        border-radius:15px;
+        transition:transform 0.3s;
       }
     }
     </style>
@@ -199,22 +237,22 @@
     
 <body>
     <header>
+      <div class="logo">Arcane Quest</div>
+
     <nav class="navbar">
-            <a href="#" class="logo">Arcane Quest</a>
-            <a href="#" class="active">Home</a>
-            <a href="arcan.html">Take the quiz</a>
+           <a href="#" class="active">Home</a>
+           <a href="#" class="active">About</a>
+           <a href="arcan.html">Take the quiz</a>
     
     </nav>
     </header>
-    <div class="container intro-container">
-        
-            <h1 >Arcane Personality Quest</h1>
-            <p class="subtitle">Discover which Arcane character matches your personality</p>
-        
+    <main class="container intro-container">
 
         <section id="intro-screen" class="game-section">
             <div class="intro">
-                <h2>Welcome to the Undercity</h2>
+            
+                <h1>Welcome to the Undercity</h1>
+            <p class="subtitle">Discover which Arcane character matches your personality</p>
                 <p>Step into the world of Piltover and Zaun in this interactive personality quiz. Through a series of scenarios inspired by the hit series Arcane, you'll discover which character's personality aligns with your own.</p>
                 <p>Answer honestly based on your instincts - there are no right or wrong answers. Your choices will reveal whether you're more of a Vi, Jinx, Viktor, Caitlyn, or a unique blend of characters.</p>
                 <p>Ready to begin your journey?</p>
@@ -238,7 +276,24 @@
       <img src="cdc.jpg" alt="Caitlyn">
       <p class="caption">Caitlyn</p>
         </div>
+      <div class="item item-4">
+      <img src="mel.jpg" alt="mel">
+      <p class="caption">Mel</p>
+        </div>
+      <div class="item item-4">
+      <img src="jayce.jpg" alt="jayce">
+      <p class="caption">Jayce</p>
+        </div>
+      <div class="item item-4">
+      <img src="silco.jpg" alt="siclco">
+      <p class="caption">Silco</p>
+        </div>
+      <div class="item item-4">
+      <img src="vik.jpg" alt="Viktor">
+      <p class="caption">Viktor</p>
+        </div>
     </div>
+
     
             <button id="start-btn" class="btn">Start the Quiz</button>
         </section>
@@ -261,11 +316,32 @@
             </div>
            
         </section>
+ <section class="about">
+          <div class="about">
+            <h3>ABOUT</h3>
+            <P><strong>Arcane Quest</strong> is a fan-made project inspired by the animated series 
+      <em>Arcane</em>, set in the cities of Piltover and Zaun. 
+      The show’s world—its emotion, art style, and storytelling—captured my imagination completely. 
+      Every character feels real, every scene feels alive, and I wanted to turn that love into something interactive.</P>
+      <p>
+      I built this quiz simply for fun and out of admiration for the series. 
+      It’s my way of celebrating the creativity and complexity of the world Riot and Fortiche created. 
+      No part of this project is official or commercial—just a personal fan project made with passion, curiosity, and a lot of late-night coding.
+    </p>
+
+    <p>
+      The goal of Arcane Quest is to let fans explore which character best reflects their personality 
+      — whether they’re driven like <strong>Vi</strong>, inventive like <strong>Viktor</strong>, 
+      free-spirited like <strong>Jinx</strong>, or strategic like <strong>Caitlyn</strong>.  
+      It’s all about connection, discovery, and having fun while diving deeper into a story I love.
+    </p>
+          </div>
+        </section>
 
         <footer>
             <p>This fan-made quiz is for entertainment purposes only. Arcane is a trademark of Riot Games.</p>
         </footer>
-    </div>
+    
     
 </body>
 </html>

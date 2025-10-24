@@ -1,44 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcane.web</title>
     <link rel="stylesheet" href="arcan.css">
     <style>
-    *{
+     *{
         margin:0;
         padding:0;
         box-sizing: border-box;
         font-family: 'Arial', sans-serif;
+     }
+        
 
-    nav{
-        background:#8934b9;
+      nav{
+        background-color:rgb(241, 19, 104);
         display:flex;
-        justify-content:space-between;
-        align-items:stretch;
-        margin-top: 0px;
-        padding: 0px;
-    }
+        justify-content:space-between;/*logo left,links right*/
+        align-items:center;
+        padding:15px 40px;
+      }
+      body {
+      background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('pop.jpg');
+      background-position: center;
+      background-attachment: scroll;
+
+      }
     
-    
-    .root{
-      --primary-color: #8934b9;
-        --secondary-color: #d11f3d;
-        --background-color: #151516;
-        --text-color: #ecdbdb;
-        --jinx:var(--primary-color);
-        --vi:var(--secondary-color);
-        --vicktor-ekko:#75bdd3;
-        --caitlyn:#d07e02;
-        background-color: var(--background-color);
-    }
-    .body{
-        background-image: url('rere.png');
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;}
     </style>
 </head>
 <body>
@@ -46,17 +38,27 @@
    <nav class="navbar">
         <div class="navdiv">
         <a href="#" class="logo">Arcane Quest</a>
-        <a href="#" class="active">Home</a></li>
         <a href="arcan.html">Take the quiz</a>
    </nav>
    </header>
-     <div class="quiz-container">
+   <section class="about">
+    <dic class="about-content">
+      <h2>How you can you play it.</h2>
+      <p>Simply you just read each question  there are no right or wrong answers.
+        Pick the option that feels most like you.The one that fits your personality best.</p>
+        The quiz is built for fans who love exploring personality through storytelling. 
+      It’s not official or affiliated with Riot Games just a passion project designed 
+      to bring Arcane’s characters closer to you.
+
+      </p>
+    </dic>
+   </section>
+     <main class="quiz-container">
     <h1>Arcane Personality Quiz</h1>
     <div id="quiz"></div>
     <button id="submit">Reveal My Archetype</button>
     <div id="result"></div>
-  </div>
+  
   <script src="arcane.js"></script>
-</body>
 </body>
 </html>

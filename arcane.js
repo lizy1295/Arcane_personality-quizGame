@@ -10,6 +10,10 @@ const quizQuestions = [
       B: "Freeze, overwhelmed by the shock and emotion",
       C: "Analyze the situation quickly for the smartest move",
       D:"Find someone in authority to handle it properly",
+      E:"Assess how this affects your long-term goals",
+      F:"Take control and direct others in the response",
+      G:"Look for creative solutions no one else considered",
+      H:"Observe and understand the underlying causes"
     }
   },
   {
@@ -19,6 +23,10 @@ const quizQuestions = [
      B:"The sheer joy of creation and discovery",
      C:"The practical benefits it will bring to people",
      D:"Ensuring it's absolutely perfect before sharing it",
+     E:"The recognition and impact it will create",
+     F:"The power and influence it will give you",
+     G:"The opportunity to help your community",
+     H:"The pursuit of knowledge and understanding"
       
     }
   },
@@ -28,7 +36,11 @@ const quizQuestions = [
     A:"Do what needs to be done - results matter most",
     B:"Struggle intensely with the decision",
     C:"Find a clever workaround that technically follows the rules",
-    D: "Refuse - there's always a right way to do things",
+    D: "Refuse there's always a right way to do things",
+    E:"Weigh the benefits against the costs carefully",
+    F:"See rules as obstacles to be strategically overcome",
+    G:"Consider how it affects the people involved",
+    H:"Question why those rules exist in the first place"
     }
   }
   ,
@@ -39,6 +51,10 @@ const quizQuestions = [
     B:"Get angry and look for someone/something to fight",
     C:"Withdraw to rethink your entire approach",
     D:"Try to put on a brave face and move forward quickly",
+    E:"Analyze what went wrong and plab your comeback",
+    F:"Reassess your strategy and adopt your methods",
+    G:"Learn from it and share those leassons with others",
+    H:"See it as valuable data in your research"
 
     }   
   }
@@ -77,7 +93,7 @@ function buildQuiz() {
 
 function showResults() {
   const answerContainers = quizContainer.querySelectorAll(".answers");//grabs all the sets of answera.
-  let counts = { A: 0, B: 0, C: 0, D: 0 };//ocunts for each answer type
+  let counts = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0, G: 0, H: 0, };//ocunts for each answer type
 
   quizQuestions.forEach((_, questionNumber) => {
     const selector = `input[name=question${questionNumber}]:checked`;//findds the selected radio button for each question
@@ -96,11 +112,23 @@ function showResults() {
       archetype = " VI";
       break;
     case "C":
-      archetype = "VICKTOR/EKKO";
+      archetype = "EKKO";
       break;
     case "D":
       archetype = "CAITLYN ";
       break;
+    case "E":
+      archetype="JAYCE";
+      break;
+    case "F":
+      archetype="SILCO";
+      break;
+    case "G":
+      archetype="MEL";
+      break;
+    case "H":
+      archetype="VIKTOR";
+      bre
   }//switch statement checks which letter qas most frequent
 
   //displays the result in the result container
