@@ -103,10 +103,11 @@
         margin-top: 40px;
         background-image:url('red.jpg');
         background-repeat:inherit;
-        display:inline;
+      
 
     }
     .item{
+        display: inline-block;
         text-align:center;
         border: 1px solid #cff34d;
         padding: 20px;
@@ -128,10 +129,10 @@
     }
     .caption{
         margin-top:8px;
-        font-size:1.1rem;
-        font-size:1.3rem;
+        font-size: 2.5rem;
         font-weight:bold;
         color:#fff;
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
   
@@ -201,19 +202,9 @@
       color: #f4e9b6;
     }
 
-    /* === FOOTER === */
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #a8996c;
-      margin-top: 40px;
-      padding: 10px;
-      border-top: 1px solid #c9bb94;
-      background-color:#669454;
-    }
     .about{
       background-color: #669454;
-      font-family: 'Times New Roman', Times, serif;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     }
 
     /* === RESPONSIVE DESIGN === */
@@ -229,6 +220,16 @@
         border-radius:15px;
         transition:transform 0.3s;
       }
+      /* === FOOTER === */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #f1efe9;
+      margin-top: 40px;
+      padding: 10px;
+
+
+    }
     }
     </style>
  
@@ -240,8 +241,8 @@
       <div class="logo">Arcane Quest</div>
 
     <nav class="navbar">
-           <a href="#" class="active">Home</a>
-           <a href="#" class="active">About</a>
+           <a href="#">Home</a>
+           <a href="#">About</a>
            <a href="arcan.html">Take the quiz</a>
     
     </nav>
@@ -254,7 +255,7 @@
                 <h1>Welcome to the Undercity</h1>
             <p class="subtitle">Discover which Arcane character matches your personality</p>
                 <p>Step into the world of Piltover and Zaun in this interactive personality quiz. Through a series of scenarios inspired by the hit series Arcane, you'll discover which character's personality aligns with your own.</p>
-                <p>Answer honestly based on your instincts - there are no right or wrong answers. Your choices will reveal whether you're more of a Vi, Jinx, Viktor, Caitlyn, or a unique blend of characters.</p>
+                <p>Answer honestly based on your instincts there are no right or wrong answers. Your choices will reveal whether you're more of a Vi, Jinx, Viktor, Caitlyn, or a unique blend of characters.</p>
                 <p>Ready to begin your journey?</p>
             </div>
     <div class="container">
@@ -295,7 +296,7 @@
     </div>
 
     
-            <button id="start-btn" class="btn">Start the Quiz</button>
+            <a href ="arcan.html" class="btn">Start the Quiz</button>
         </section>
 
         <section id="quiz-screen" class="game-section">

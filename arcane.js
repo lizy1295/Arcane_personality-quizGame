@@ -4,7 +4,7 @@ const submitButton = document.getElementById("submit");//these lines grab specif
 //this is an array of objects representing the quiz questions and  answers
 const quizQuestions = [
   {
-    question: "You witness something terrible happening to someone you love. Your first instinct is to:",
+    question: "1,You witness something terrible happening to someone you love. Your first instinct is to:",
     answers: {
       A: "Charge in immediately - action is the only answer",
       B: "Freeze, overwhelmed by the shock and emotion",
@@ -17,7 +17,7 @@ const quizQuestions = [
     }
   },
   {
-    question: "You're working on a passion project that could change lives. You're most driven by:",
+    question: "2,You're working on a passion project that could change lives. You're most driven by:",
     answers: {
      A: "Proving your critics wrong and making your mark",
      B:"The sheer joy of creation and discovery",
@@ -31,7 +31,7 @@ const quizQuestions = [
     }
   },
   {
-    question: "To achieve something important, you might have to break some rules. You:",
+    question: "3,To achieve something important, you might have to break some rules. You:",
     answers: {
     A:"Do what needs to be done - results matter most",
     B:"Struggle intensely with the decision",
@@ -45,7 +45,7 @@ const quizQuestions = [
   }
   ,
   {
-    question:" When faced with harsh criticism, you tend to:",
+    question:"4,When faced with harsh criticism, you tend to:",
     answers: {
     A:"Blame yourself endlessly, hearing criticism in your head",
     B:"Get angry and look for someone/something to fight",

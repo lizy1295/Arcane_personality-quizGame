@@ -25,6 +25,24 @@
 .nav-links a.active{
   color:#fff
 }
+#question-container li {
+  padding: 15px 25px;      /* bigger clickable area */
+  margin: 10px 0;          /* spacing between answers */
+  font-size: 1.2rem;       /* larger text */
+  font-weight: bold;
+  border-radius: 8px;      /* rounded corners */
+  background-color: #61ce6a;
+  color: #fff;
+  cursor: pointer;
+  list-style: none;        /* removes default bullets */
+  transition: background 0.3s, transform 0.2s;
+}
+
+#question-container li:hover {
+  background-color: #4fa850;
+  transform: scale(1.05);  /* subtle hover effect */
+}
+
 .about{
   color:#fff;
   justify-content: center;
@@ -35,7 +53,7 @@
   border-bottom:2px solid #d8d8d8;
 }
 .about h2{
-  color: #ec4f8c;
+  color: #c20b0b;
   font-size: 1.7rem;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -51,7 +69,6 @@
 }
 
 .header {
-  background-image: url('pop.jpg');
   top:0;
   left:0;
   width:100%;
@@ -63,7 +80,10 @@
   justify-content:space-between;
   align-items: center;
 }
-
+.p{
+  color:#fff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 .quiz-container {
   border: 1px solid #e2d7b7;
   border-radius: 20px;
@@ -71,12 +91,12 @@
   max-width: 800px;
   width:90%;
   text-align: center;
-  box-shadow: 0 0 20px rgba(235, 17, 46, 0.3);
+  box-shadow: 0 0 20px rgba(235, 5, 5, 0.3);
   justify-content: center;
  margin:80px auto;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-family:Arial, Helvetica, sans-serif;
  color: #fff;
- background-color: #e46072;
+backdrop-filter: blur(6px);
  font-size:1.6rem;
 }
 
@@ -87,7 +107,7 @@ h1 {
 
 button {
   background-color: #e2d7b7;
-  color: #4b0318;
+  color: #750505;
   border: none;
   padding: 10px 20px;
   margin-top: 20px;
