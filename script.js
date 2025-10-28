@@ -107,7 +107,7 @@ function showResults() {
   switch (maxLetter) {
     case "A":
       archetype = "JINX";
-      break;
+      break; 
     case "B":
       archetype = " VI";
       break;

@@ -25,23 +25,6 @@
 .nav-links a.active{
   color:#fff
 }
-#question-container li {
-  padding: 15px 25px;      /* bigger clickable area */
-  margin: 10px 0;          /* spacing between answers */
-  font-size: 1.2rem;       /* larger text */
-  font-weight: bold;
-  border-radius: 8px;      /* rounded corners */
-  background-color: #61ce6a;
-  color: #fff;
-  cursor: pointer;
-  list-style: none;        /* removes default bullets */
-  transition: background 0.3s, transform 0.2s;
-}
-
-#question-container li:hover {
-  background-color: #4fa850;
-  transform: scale(1.05);  /* subtle hover effect */
-}
 
 .about{
   color:#fff;
